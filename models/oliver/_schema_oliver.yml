@@ -13,3 +13,7 @@ models:
     description: "Store Dimension"
   - name: fact_sales
     description: "Sales fact"
+  - name: fact_certification
+    description: "Certification fact, One row per employee per certification received"
+  - name: stg_employee_certifications
+    description: "Stage employee certifications"
