@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: eco_transactional_src
+    database: joshliddell
+    schema: ECOESSENTIALS_TRANSACTIONAL_DB
+    tables:
+      - name: customer
+      - name: order
+      - name: order_line
+      - name: product
+      - name: promotional_campaign
+  - name: eco_email_src
+    database: joshliddell
+    schema: S3_ECOESSENTIALS
+    tables:
+      - name: marketingemails
