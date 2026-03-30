@@ -9,11 +9,39 @@ models:
     description: "Employee Dimension"
   - name: oliver_dim_product
     description: "Product Dimension"
+    columns:
+      - name: product_key
+        tests:
+          - unique
+      - name: product_name
+        tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - "Marshmallows"
+                  - "Small Popcorn"
+                  - "Chocolate Bar"
+                  - "Gummy Bears"
+                  - "Small Coffee"
   - name: oliver_dim_store
     description: "Store Dimension"
   - name: fact_sales
     description: "Sales fact"
+    columns:
+      - name: customer_key
+        description: "A foreign key to the customer dimension"
+        tests:
+          - not_null
   - name: oliver_fact_certification
     description: "Certification fact, One row per employee per certification received"
+    columns:
+      - name: employee_key
+        tests:
+          - relationships:
+              arguments:
+                to: ref('oliver_dim_employee') # the model you want to compare to
+                field: employee_key # the field on the model you want to compare to
   - name: stg_employee_certifications
     description: "Stage employee certifications"
+
+
