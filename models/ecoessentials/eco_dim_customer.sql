@@ -4,7 +4,7 @@
 ) }}
 
 SELECT
-{{ dbt_utils.generate_surrogate_key(['customer_id', 'Customer_First_Name', 'Customer_Last_Name']) }} as custkey,
+{{ dbt_utils.generate_surrogate_key(['customer_id', 'Customer_First_Name', 'Customer_Last_Name']) }} as cust_key,
 customer_id,
 -- Customer_First_Name,
 -- Customer_Last_Name,
