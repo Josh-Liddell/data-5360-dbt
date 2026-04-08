@@ -6,7 +6,7 @@
 SELECT
     t.time_key,
     d.date_key,
-    cu.custkey,
+    cu.cust_key,
     c.campaign_key,
     e.event_key,
     em.email_key

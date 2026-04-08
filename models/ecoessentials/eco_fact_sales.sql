@@ -4,7 +4,7 @@
 ) }}
 
 SELECT
-    c.custkey,
+    c.cust_key,
     d.date_key,
     ca.campaign_key,
     p.product_key,
