@@ -55,12 +55,12 @@ models:
   - name: eco_fact_sales
     description: "Sales fact"
     columns:
-      - name: email_key
+      - name: cust_key
         tests:
           - relationships:
               arguments:
-                to: ref('eco_dim_email') # the model you want to compare to
-                field: email_key # the field on the model you want to compare to
+                to: ref('eco_dim_customer') # the model you want to compare to
+                field: cust_key # the field on the model you want to compare to
   - name: eco_fact_marketingemail
     description: "Marketing Email fact"
     columns:
